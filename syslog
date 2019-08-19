@@ -1,0 +1,8 @@
+Aug 18 00:00:00 zk8005/172.22.170.172 zookeeper: 2019-08-18 00:00:00,045 [myid:5] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1008] - Closed socket connection for client /172.22.171.19:51488 which had sessionid 0x56a61cea9d9681b
+
+Aug 18 22:31:37 172.26.46.65/172.26.46.65 633 <142>1 2019-08-19T03:31:36.950859+00:00 us-east-1.172.26.46.65 pod.log/dev-downloader/vk-7995dffc6c-6vhhh/vkdow - - [kubernetes@47450 app.kubernetes.io/component="downloader" app.kubernetes.io/name="vk" app.kubernetes.io/version="21.40.0" pod-template-hash="7995dffc6c" namespace_name="dev-downloader" object_name="vk-7995dffc6c-6vhhh" container_name="vkdownloader" vm_id="us-east-1.172.26.46.65"] [Aug 19 03:31:36.950 UTC 2019][VK-akka.actor.default-dispatcher-396][INFO][com.accelovation.content.vk.VKFileOutput:dumpStatistic] json:{"dedupNum":707236,"logEventId":"201908190331369500021172.vk-7995dffc6c-6vhhh.7","writtenNum":764}
+
+
+Aug 15 01:01:41 spin32/172.26.8.222 vk_downloader: 2019-08-15T06:01:41.305+0000: [GC (Allocation Failure) [PSYoungGen: 268832K->192K(257536K)] 303349K->34733K(326144K), 0.0022328 secs] [Times: user=0.01 sys=0.01, real=0.00 secs]
+
+Aug 19 07:15:34 vk-7995dffc6c-6vhhh/172.26.46.65 vk[1]: 2019-08-19T07:15:34.846+0000: [GC (Allocation Failure) 2019-08-19T07:15:34.846+0000: [DefNew: 27458K->1K(30848K), 0.0010510 secs] 76954K->49498K(99136K), 0.0010968 secs] [Times: user=0.00 sys=0.00, real=0.00 secs]
