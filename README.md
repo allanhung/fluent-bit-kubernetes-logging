@@ -14,11 +14,17 @@ This repository contains a set of Yaml files to deploy Fluent Bit which consider
 
 [Fluent Bit](http://fluentbit.io) must be deployed as a DaemonSet so that it will be available on every node of your Kubernetes cluster. To get started run the following commands to create the namespace, service account and role setup:
 
+
 ```
 $ kubectl create namespace logging
 $ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/fluent-bit-service-account.yaml
 $ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/fluent-bit-role.yaml
 $ kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/fluent-bit-role-binding.yaml
+```
+
+#### Build fluent-bit container
+```
+$ docker build -t allanhung/fluent-bit:0.12.1 .
 ```
 
 #### Fluent Bit to Elasticsearch
