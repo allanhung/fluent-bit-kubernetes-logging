@@ -1,0 +1,14 @@
+bases:
+- ../../base/
+
+resources:
+- secrets.yaml
+
+patchesStrategicMerge:
+- fluent-bit.yaml
+
+configMapGenerator:
+- name: fluent-bit-config
+  behavior: merge
+  files:
+  - fluent-bit.conf

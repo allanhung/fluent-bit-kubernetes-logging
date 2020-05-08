@@ -6,9 +6,14 @@ docker push allanhung/fluent-bit:1.4.2
 
 ## deploy into kubernetes
 ```
-kubectl create -f manifest/* -n logging
+kustomize build kustomize | kubectl apply -f -
 ```
 
+## create your own deployment
+```
+kubectl create secret docker-registry example-registry --docker-server=example-registry.com --docker-username=user --docker-password=password --dry-run -o yaml > kustomize/overlays/example/secrets.yaml
+kustomize build kustomize/overlays/example | kubectl apply -f -
+```
 ## Reference
   - [fluent-bit](https://github.com/fluent/fluent-bit)
   - [loki](https://github.com/grafana/loki)
