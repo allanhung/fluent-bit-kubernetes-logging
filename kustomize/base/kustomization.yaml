@@ -10,6 +10,7 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
+- ns.yaml
 - fluent-bit.yaml
 - fluent-sa.yml
 
