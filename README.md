@@ -1,7 +1,7 @@
 ## Build and push to repository
 ```
-docker build -t allanhung/fluent-bit:1.4.2 .
-docker push allanhung/fluent-bit:1.4.2
+docker build -t allanhung/fluent-bit:1.4.5 .
+docker push allanhung/fluent-bit:1.4.5
 ```
 
 ## deploy into kubernetes

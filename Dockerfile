@@ -1,4 +1,4 @@
-FROM golang:1.13 AS build
+FROM golang:1.14 AS build
 ENV CGO_ENABLED=1
 ENV GOOS=linux
 ENV GOARCH=amd64
@@ -10,7 +10,7 @@ RUN make clean && make fluent-bit-plugin
 WORKDIR /go/src/github.com/allanhung/fluent-bit-out-syslog
 RUN rm -f go.mod go.sum && go build -buildmode c-shared -o out_syslog.so cmd/main.go
 
-FROM fluent/fluent-bit:1.4.2
+FROM fluent/fluent-bit:1.4.5
 COPY --from=build /go/src/github.com/grafana/loki/cmd/fluent-bit/out_loki.so /usr/lib/x86_64-linux-gnu/
 COPY --from=build /go/src/github.com/allanhung/fluent-bit-out-syslog/out_syslog.so /usr/lib/x86_64-linux-gnu/
 COPY conf/fluent-bit.conf \
