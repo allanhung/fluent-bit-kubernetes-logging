@@ -9,7 +9,7 @@ spec:
       - name: example-registry
       containers:
       - name: fluent-bit
-        image: example-registry/kubernetes/fluent-bit:1.4.2
+        image: example-registry/kubernetes/fluent-bit:1.4.5
         command:
           - /fluent-bit/bin/fluent-bit
           - -c

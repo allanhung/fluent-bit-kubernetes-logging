@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:	dev-internal-registry
       containers:
       - name: fluent-bit
-        image: allanhung/fluent-bit:1.4.2
+        image: allanhung/fluent-bit:1.4.5
         imagePullPolicy: Always
         command:
           - /fluent-bit/bin/fluent-bit

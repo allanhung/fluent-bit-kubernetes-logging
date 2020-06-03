@@ -3,19 +3,23 @@ kind: Kustomization
 
 namespace: logging
 
+patches:
+- path: nodeSelector.yaml
+  target:
+    kind: Pod
+
 commonLabels:
-  app: fluent-bit-logging
+  app: fluent-bit-logging-debug
 
 generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-- ns.yaml
 - fluent-bit.yaml
-- fluent-sa.yml
+- logging-debug.yaml
 
 configMapGenerator:
-- name: fluent-bit-config
+- name: fluent-bit-config-debug
   files:
   - fluent-bit.conf
   - parsers.conf
